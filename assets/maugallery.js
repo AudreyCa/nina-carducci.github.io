@@ -153,9 +153,7 @@
           index = i ;
         }
       });
-      next =
-        imagesCollection[index] ||
-        imagesCollection[imagesCollection.length - 1];
+      next = imagesCollection[index -1] || imagesCollection[imagesCollection.length - 1]; //! ici, il manquait -1 à l'index pour que la flèche du carrousel affiche la photo précédente (prevImage)
       $(".lightboxImage").attr("src", $(next).attr("src"));
     },
     nextImage() {
@@ -192,7 +190,7 @@
           index = i;
         }
       });
-      next = imagesCollection[index] || imagesCollection[0];
+      next = imagesCollection[index + 1] || imagesCollection[0]; //! ici, il manquait +1 à l'index pour que la flèche du carrousel affiche la photo suivante (nextImage)
       $(".lightboxImage").attr("src", $(next).attr("src"));
     },
     createLightBox(gallery, lightboxId, navigation) {
@@ -204,13 +202,13 @@
                         <div class="modal-body">
                             ${
                               navigation
-                                ? '<div class="mg-prev" style="cursor:pointer;position:absolute;top:50%;left:-15px;background:white;"><</div>'
+                                ? '<div class="mg-prev" style="cursor:pointer;position:absolute;top:50%;left:0px;background:white;"><</div>'
                                 : '<span style="display:none;" />'
                             }
                             <img class="lightboxImage img-fluid" alt="Contenu de l'image affichée dans la modale au clique"/>
                             ${
                               navigation
-                                ? '<div class="mg-next" style="cursor:pointer;position:absolute;top:50%;right:-15px;background:white;}">></div>'
+                                ? '<div class="mg-next" style="cursor:pointer;position:absolute;top:50%;right:0px;background:white;}">></div>'
                                 : '<span style="display:none;" />'
                             }
                         </div>

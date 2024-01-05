@@ -3959,10 +3959,11 @@ textarea.form-control-lg {
   border-color: transparent;
 }
 .nav-tabs .nav-link.active,
-.nav-tabs .nav-item.show .nav-link {
+.nav-tabs .nav-item.show .nav-link,.nav-item > .active-tag {
   color: #495057;
   background-color: #fff;
   border-color: #dee2e6 #dee2e6 #fff;
+  border-radius: 0.25rem;
 }
 .nav-tabs .dropdown-menu {
   margin-top: -1px;

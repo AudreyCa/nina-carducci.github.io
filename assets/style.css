@@ -90,9 +90,9 @@ body {
 	font-size: 14px;
 }
 
-#gallery {
-	/*	min-height: 100vh; */
-}
+/* #gallery {
+	min-height: 100vh;
+} */
 .title{
 	text-align: center;
 	padding-block: 2em;
@@ -100,14 +100,20 @@ body {
 .gallery .nav {
 	justify-content: center;
 }
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-	color: #fff;
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link, .nav-item > .active-tag {
+	color: #000;
 	background-color: #BEB45A;
-	border-radius:0 ;
 }
 .nav-pills .nav-link {
-	color: #000
+	color: #000;
 }
+
+/* Ajout css pour la navigation de la gallery */
+.nav-item:hover{
+	cursor:pointer;
+}
+/* Fin de l'ajout */
+
 .item-column {
 	position: relative;
 	margin-bottom: 0 !important;
@@ -125,7 +131,23 @@ body {
 	height: 100%;
 	object-fit: cover;
 	padding: .5em;
+	cursor: pointer; /* Ajout du cursor:pointer pour comprendre que les images sont cliquable et qu'il y a un carousel */
 }
+
+/* Ajout de code pour ameliorer l'affichage des image du caroussel */
+.modal-body{
+	padding: 35px;
+	height: 80vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.lightboxImage{
+	max-height: 70vh;
+	border-radius: 5px;
+}
+/* Fin de l'ajout */
+
 .mg-prev, .mg-next {
 	width: 30px;
 	height: 30px;
