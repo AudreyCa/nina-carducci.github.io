@@ -22,6 +22,10 @@ body {
 	font-size: 26px;
 }
 
+.top-header .nav{
+	max-width: 40%;
+}
+
 .nav ul {
 	display: flex;
 	list-style-type: none;
@@ -42,7 +46,16 @@ body {
 	width: 20px;
 }
 
+
+
+.carousel-item img{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
 #about {
+	width: 100%;
 	display: flex;
 	background-color: #F6D2B8;
 	padding-inline: 100px;
@@ -62,6 +75,8 @@ body {
 }
 
 .picture {
+	max-width: 500px;
+	max-height: 500px;
 	flex: 1;
 	margin: 0 20px;
 	z-index: 0;
@@ -69,26 +84,31 @@ body {
 
 .picture img {
 	width: 100%;
+	max-width: 500px;
+	max-height: 500px;
 
 }
 #about-me {
-	flex: 2
+	flex: 2;
+	width: 100%;
 }
 .about-me__title {
 	margin-top: 1em;
 	margin-bottom: 60px;
 	font-size: 30px;
+	width: 100% !important;
 }
 .about-me__introduction {
 	font-family: 'Spectral';
 	font-weight: 800;
 	font-style: italic;
-	width: 60% !important;
 	font-size: 17px !important;
+	width: 100% !important;
 }
 #about-me p {
 	width: 80%;
 	font-size: 14px;
+	width: 100% !important;
 }
 
 /* #gallery {
@@ -269,6 +289,9 @@ input[type="submit"] {
 }
 
 @media all and (max-width: 1180px) {
+	.top-header .nav{
+		max-width: 70%;
+	}
 	.picture {
 		flex : 2;
 	}
@@ -291,6 +314,7 @@ input[type="submit"] {
 	}
 	.picture {
 		width: 50%;
+		height: auto;
 	}
 	.picture.left::before {
 		width: 100%;
@@ -344,6 +368,9 @@ input[type="submit"] {
 }
 
 @media all and (max-width: 650px) {
+	.top-header .nav{
+		max-width: 90%;
+	}
 	.top-header {
 		flex-direction: column;
 		padding-inline: 0;
